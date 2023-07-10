@@ -1,0 +1,124 @@
+:root {
+    --color-body:#b6cbce;
+    --color-heading:#eef3db;
+    --color-base:#033f47;
+    --color-base2:#022a30;
+    --color-band:#e0f780;
+    --color-band2:#deff58;
+    --sidbar-width:240px;
+    --font-base:"Bai Jamjuree";
+}
+body{
+    background-color:var(--color-base2);
+    color:var(--color-body);
+    font-family:var(--font-base),sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 h2 h3 h4 h5 h6{
+    color: var(--color-heading);
+    font-weight: 700;
+
+    }
+a {
+    text-decoration: none;
+     color: var(--color-body); 
+    transition: all 0.4s ease;
+}      
+ a:hover {
+        color:var(--color-band2);
+}
+    img{
+        width:100%;
+    }
+    .full-height{
+        min-height: 100vh;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .text-brand{
+        color:var(--color-band);
+    }
+    /* =====nav part==== */
+    .navbar{
+        background-color: var(--color-base);
+    }
+    .navbar .nav-link{
+        font-weight: 700;
+        text-transform: uppercase;
+        color:#fff;
+    }
+    .navbar .nav-link.active{
+        color:var(--color-band);
+    }
+    .navbar .nav-link:hover {
+        color:var(--color-brand);
+    }
+    @media(min-width:992px){
+        .navbar {
+            min-height: 100vh;
+            width: var(--sidbar-width);
+            background: linear-gradient(rgba(2, 42, 48, 0.922),rgba(3, 63, 71, 0.886)), url(../images/a.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar-brand img{
+            border:8px solid var(--color-brand);
+        }
+    }
+    /* ====contant wraper=== */
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+.btn{
+    padding: 12px 22px;
+    font-weight: 700;
+    margin: 10px;
+}
+.btn-brand{
+    background-color: var(--color-band);
+    border-color:var(--color-band);
+   color:var(--color-base);
+}
+.btn-brand:hover {
+    color:var(--color-base2);
+}
+/* ======service part==== */
+.shadow-effect{
+    transition: all 0.5s;
+
+}
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0 var(--color-band);
+}
+.bg-base{
+    background-color: var(--color-base);
+
+}
+.iconbox{
+    width:60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-band);
+    color:var(--color-base);
+    border-radius: 25px;
+}
+/* =====card=== */
+.card-custom .card-custom-image{
+    overflow: hidden;
+}
+.card-custom .card-custom-image img{
+    transition: all 0.4s ease;
+}
+.card-custom:hover .card-custom-image img{
+    transform: scale(1.1);
+}
